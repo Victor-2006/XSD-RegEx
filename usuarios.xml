@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="usuarios.xsd">
+    <usuario id="U001">
+        <nombreCompleto>Ana Lopez Garcia</nombreCompleto>
+        <email>ana.lopez@gmail.com</email>
+        <telefono>612345678</telefono>
+        <codigoPostal>41001</codigoPostal>
+        <nombreUsuario>ana_lopez1</nombreUsuario>
+        <contrasena>Ana1234!</contrasena>
+    </usuario>
+
+    <usuario id="U002">
+        <nombreCompleto>Pedro Martin Ruiz</nombreCompleto>
+        <email>pedro.martin@hotmail.com</email>
+        <telefono>711223344</telefono>
+        <codigoPostal>28013</codigoPostal>
+        <nombreUsuario>pedro.mr2</nombreUsuario>
+        <contrasena>Pedro2026@</contrasena>
+    </usuario>
+
+    <usuario id="U003">
+        <nombreCompleto>Lucia Gomez Perez</nombreCompleto>
+        <email>lucia.gomez@empresa.es</email>
+        <telefono>955667788</telefono>
+        <codigoPostal>11008</codigoPostal>
+        <nombreUsuario>lucia_g3</nombreUsuario>
+        <contrasena>Lucia#98A</contrasena>
+    </usuario>
+</usuarios>

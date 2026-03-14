@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="usuarios">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="usuario" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombreCompleto" type="tipoNombreCompleto"/>
+                            <xs:element name="email" type="tipoEmail"/>
+                            <xs:element name="telefono" type="tipoTelefono"/>
+                            <xs:element name="codigoPostal" type="tipoCodigoPostal"/>
+                            <xs:element name="nombreUsuario" type="tipoNombreUsuario"/>
+                            <xs:element name="contrasena" type="tipoContrasena"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="tipoId" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="tipoId">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="U[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNombreCompleto">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5"/>
+            <xs:maxLength value="60"/>
+            <xs:pattern value="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+   
+    <xs:simpleType name="tipoTelefono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[6789][0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCodigoPostal">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(0[1-9]|[1-4][0-9]|5[0-2])[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoNombreUsuario">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="4"/>
+            <xs:maxLength value="20"/>
+            <xs:pattern value="[a-z][a-z0-9._]{3,19}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoContrasena">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="8"/>
+            <xs:maxLength value="30"/>
+            <xs:pattern value=".*[A-Z].*"/>
+            <xs:pattern value=".*[a-z].*"/>
+            <xs:pattern value=".*[0-9].*"/>
+            <xs:pattern value=".*[^A-Za-z0-9].*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
