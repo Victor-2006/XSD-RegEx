@@ -7,7 +7,7 @@ En esta actividad he creado un archivo XML con datos de usuarios y un archivo XS
 - `usuarios.xml`
 - `usuarios.xsd`
 - `README.md`
-
+- `grabacion.mp4`
 ## estructura del xml
 El XML tiene un elemento raiz llamado `usuarios` y dentro hay varios elementos `usuario`.
 
