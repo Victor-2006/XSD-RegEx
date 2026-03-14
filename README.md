@@ -71,5 +71,3 @@ He relacionado el XML con el XSD usando esta linea:
 
 Despues se puede comprobar en VS Code con una extension de XML/XSD que el archivo es valido.
 
-## conclusion
-Con esta actividad he practicado como crear un XML y como validarlo con un XSD usando restricciones y expresiones regulares.
